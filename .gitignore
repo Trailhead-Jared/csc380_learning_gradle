@@ -1,5 +1,5 @@
 *.key
-
+.gradle/
 target/
 
 # Compiled class file
@@ -27,6 +27,3 @@ hs_err_pid*
 
 build/
 
-target/
-
-owm.key
