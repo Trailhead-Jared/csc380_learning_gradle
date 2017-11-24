@@ -10,8 +10,12 @@
 // prefer. In this case NetBeans will not add these tasks but you may rely on
 // your own implementation.
 
+apply plugin: 'application'
+
+mainClassName = 'org.trailheadsystems.weatherApplication.MainWindow'
+
 if (!hasProperty('mainClass')) {
-    ext.mainClass = 'org.trailheadsystems.weatherApplication.MainWindow'
+    ext.mainClass = mainClassName
 }
 
 dependencies {
@@ -29,7 +33,7 @@ jar {
   manifest {
     attributes(
       'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-      'Main-Class': 'org.trailheadsystems.weatherApplication.MainWindow'
+      'Main-Class': "$mainClassName"
     )
   }
 }
