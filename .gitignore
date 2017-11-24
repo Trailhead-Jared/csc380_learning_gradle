@@ -1,3 +1,7 @@
+*.key
+
+target/
+
 # Compiled class file
 *.class
 
